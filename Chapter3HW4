@@ -1,0 +1,63 @@
+/*
+ * Malcolm Ealy
+ * mxealy0001@student.stcc.edu
+ * 10/4/21
+ * CSC-111
+ * Homework 4 (Chapter 3)
+ * Create rock paper scissors
+ */
+
+import java.util.*;
+
+public class Homework4 {
+
+	
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Choose between rock, paper, or scissors (1, 2, or 3).");
+		int Choice = input.nextInt();
+		input.close();
+		
+		if (Choice == 1)
+			System.out.println("You choose rock.");
+		else if (Choice == 2)
+			System.out.println("You choose paper.");
+		else if (Choice == 3)
+			System.out.println("You choose scissors.");
+				
+		int Computer = (int)(3 * Math.random() + 1);
+		System.out.println(Computer);
+		if (Computer == 1)
+			System.out.println("The computer chooses rock.");
+		else if (Computer == 2)
+			System.out.println("The computer chooses paper.");
+		else if (Computer == 3)
+			System.out.println("The computer chooses scissors.");
+		
+		if (Choice == Computer)
+			System.out.println("The game is a draw.");
+			else if (Choice == 1) {
+				if (Computer == 2)
+					System.out.println("You lose...");
+				if (Computer == 3)
+					System.out.println("You win!");
+			}
+			else if (Choice == 2) {
+				if (Computer == 1)
+					System.out.println("You win!");
+				if (Computer == 3)
+					System.out.println("You lose...");
+			}
+			else if (Choice == 3) {
+				if (Computer == 2)
+					System.out.println("You win!");
+				if (Computer == 1)
+					System.out.println("You lose...");
+			}
+			
+			
+		
+		
+	}
+
+}
